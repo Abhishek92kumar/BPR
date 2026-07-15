@@ -87,6 +87,7 @@ def get_class_from_description(description):
     elif "9W01" in desc: return "C9XB"
     elif "XW01" in desc: return "C10XB"
     elif "8W01" in desc: return "C8XA"
+    elif "XR01" in desc: return "C10XA"
 
 
     
