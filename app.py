@@ -96,7 +96,7 @@ def get_class_from_description(description):
     elif "OW05" in desc: return "CCFE"
     elif "9W03" in desc: return "ICX9A"
     elif "XW10" in desc: return "CW10X"
-    # elif "SW01" in desc: return "CSSB"
+    elif "CCM2" in desc: return "CCCN"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
