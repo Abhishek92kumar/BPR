@@ -6,7 +6,7 @@ import pandas as pd
 
 # ----------------- STREAMLIT CONFIG -----------------
 st.set_page_config(page_title='Aakash Automated BPR', page_icon='🎉', layout="wide")
-st.title("📅 Aakash Automated BPR (API Version)")
+st.title("📅 Aakash Automated BPR")
 
 # ----------------- GOOGLE API AUTHENTICATION -----------------
 def get_credentials():
@@ -58,11 +58,15 @@ def get_class_from_description(description):
     elif "OW04" in desc: return "CCFD"
     elif "TW02" in desc: return "CTYC"
     elif "OW01" in desc: return "CCFJ"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
+
+    # for Deepak Jain Sir
+    elif "RM02" in desc: return "CRA"
+    elif "RM09" in desc: return "CRE"
+    elif "OW10" in desc: return "COCFA"
+    elif "SW02" in desc: return "SSIV"
+    elif "TR05" in desc: return "OTYM"
+
+    
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
