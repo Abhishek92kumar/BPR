@@ -89,13 +89,13 @@ def get_class_from_description(description):
     elif "8W01" in desc: return "C8XA"
     elif "XR01" in desc: return "C10XA"
 
-
+    # for Ratul Rudra
     
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
+    elif "RM08" in desc: return "CWRMD"
+    elif "PS01" in desc: return "CPSA"
+    elif "OW05" in desc: return "CCFE"
+    elif "9W03" in desc: return "ICX9A"
+    elif "XW10" in desc: return "CW10X"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
