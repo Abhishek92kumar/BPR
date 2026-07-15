@@ -73,16 +73,23 @@ def get_class_from_description(description):
     elif "TW01" in desc: return "CCFG"
     elif "OW06" in desc: return "CCFF"
     elif "OW07" in desc: return "CTYB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
-    # elif "SW01" in desc: return "CSSB"
+
+    # for Diptarka Ghosh
+    elif "TR02" in desc: return "CTYG"
+    elif "TW05" in desc: return "CTYF"
+    elif "TW03" in desc: return "SSIV"
+
+    # for Susovan Mitra
+    elif "RM07" in desc: return "CWRMC"
+    elif "RM03" in desc: return "CWRMB"
+    elif "RM01" in desc: return "CWRMA"
+    elif "TW04" in desc: return "CWTYA"
+    elif "9W01" in desc: return "C9XB"
+    elif "XW01" in desc: return "C10XB"
+    elif "8W01" in desc: return "C8XA"
+
+
+    
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
     # elif "SW01" in desc: return "CSSB"
