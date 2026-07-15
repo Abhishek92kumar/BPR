@@ -77,7 +77,7 @@ def get_class_from_description(description):
     # for Diptarka Ghosh
     elif "TR02" in desc: return "CTYG"
     elif "TW05" in desc: return "CTYF"
-    elif "TW03" in desc: return "SSIV"
+    elif "TW03" in desc: return "CTYD"
 
     # for Susovan Mitra
     elif "RM07" in desc: return "CWRMC"
