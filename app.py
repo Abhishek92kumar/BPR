@@ -47,6 +47,19 @@ def get_class_from_description(description):
     elif "8WI1" in desc: return "IC8X"
     elif "FW02" in desc: return "FSIV"
     elif "TW04" in desc: return "CTYE"
+     # for others Avinash Sir
+    elif "SW01" in desc: return "CSSB"
+    elif "SR01" in desc: return "CSSA"
+    elif "FW01" in desc: return "CFSB"
+    elif "OW03" in desc: return "CCFC"
+    # # elif "FW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+
+
+
+    
     return "Other"
 
 # ----------------- MAIN DISPLAY FUNCTION -----------------
@@ -134,7 +147,7 @@ st.markdown("""
 
 # ----------------- UI -----------------
 st.sidebar.header("👨‍🏫 Faculty Lookup")
-target_email = st.sidebar.text_input("Enter Faculty Email Address:", value="abhishek.fr923@aesl.in")
+target_email = st.sidebar.text_input("Enter Faculty Email Address:", value="xxxxxx@aesl.in")
 
 if st.sidebar.button("📥 Fetch Schedule"):
     if target_email.endswith("@aesl.in"):
