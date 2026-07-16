@@ -262,6 +262,13 @@ from fpdf import FPDF
 # ----------------- STREAMLIT CONFIG -----------------
 st.set_page_config(page_title='Aakash Automated BPR', page_icon='🎉', layout="wide")
 st.title("📅 Aakash Automated BPR")
+# ----------------- STREAMLIT CONFIG -----------------
+st.set_page_config(
+    page_title='Aakash Automated BPR', 
+    page_icon='🎉', 
+    layout="wide", 
+    initial_sidebar_state="expanded"  # <--- Add this parameter
+)
 
 # ----------------- GOOGLE API AUTHENTICATION -----------------
 def get_credentials():
