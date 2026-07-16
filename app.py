@@ -467,16 +467,16 @@ def fetch_and_display_schedule(email, name_label):
             st.warning("No events found in the selected timeframe.")
             return
 
-        processed_events = []
-        for event in raw_events:
-            if 'start' not in event or 'end' not in event:
-                continue
+        # processed_events = []
+        # for event in raw_events:
+        #     if 'start' not in event or 'end' not in event:
+        #         continue
 
-            start_time = parse_api_time(event['start'])
-            end_time = parse_api_time(event['end'])
-            description = event.get('description', '')
-            summary = event.get('summary', 'No Title')
-processed_events = []
+        #     start_time = parse_api_time(event['start'])
+        #     end_time = parse_api_time(event['end'])
+        #     description = event.get('description', '')
+        #     summary = event.get('summary', 'No Title')
+        processed_events = []
         for event in raw_events:
             if 'start' not in event or 'end' not in event:
                 continue
