@@ -567,29 +567,61 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ----------------- UI / SIDEBAR -----------------
-st.sidebar.header("👨‍🏫 Faculty Lookup")
+# st.sidebar.header("👨‍🏫 Faculty Lookup")
 
-# Load faculty dictionary from secrets
-try:
-    faculty_dict = dict(st.secrets["faculty_directory"])
-except Exception:
-    faculty_dict = {}
+# # Load faculty dictionary from secrets
+# try:
+#     faculty_dict = dict(st.secrets["faculty_directory"])
+# except Exception:
+#     faculty_dict = {}
 
-# Build the dropdown options
-options = ["-- Select Faculty --"] + list(faculty_dict.keys()) + ["Search by Custom Email..."]
+# # Build the dropdown options
+# options = ["-- Select Faculty --"] + list(faculty_dict.keys()) + ["Search by Custom Email..."]
 
-# The selectbox natively allows the user to type to search!
-selected_option = st.sidebar.selectbox("Search Name or Select:", options)
+# # The selectbox natively allows the user to type to search!
+# selected_option = st.sidebar.selectbox("Search Name or Select:", options)
 
-target_email = ""
-if selected_option == "Search by Custom Email...":
-    target_email = st.sidebar.text_input("Enter @aesl.in email:")
-elif selected_option != "-- Select Faculty --":
-    target_email = faculty_dict[selected_option]
+# target_email = ""
+# if selected_option == "Search by Custom Email...":
+#     target_email = st.sidebar.text_input("Enter @aesl.in email:")
+# elif selected_option != "-- Select Faculty --":
+#     target_email = faculty_dict[selected_option]
 
-if st.sidebar.button("📥 Fetch Schedule"):
-    if target_email and target_email.endswith("@aesl.in"):
-        # Pass both email and the display name for the download files
-        fetch_and_display_schedule(target_email, selected_option)
-    else:
-        st.sidebar.error("Please provide a valid @aesl.in email address.")
+# if st.sidebar.button("📥 Fetch Schedule"):
+#     if target_email and target_email.endswith("@aesl.in"):
+#         # Pass both email and the display name for the download files
+#         fetch_and_display_schedule(target_email, selected_option)
+#     else:
+#         st.sidebar.error("Please provide a valid @aesl.in email address.")
+# ----------------- UI / MAIN PAGE (MOBILE FRIENDLY) -----------------
+st.markdown("### 👨‍🏫 Faculty Lookup")
+
+# Create a container so it looks clean on mobile and desktop
+with st.container():
+    # Load faculty dictionary from secrets
+    try:
+        faculty_dict = dict(st.secrets["faculty_directory"])
+    except Exception:
+        faculty_dict = {}
+
+    # Build the dropdown options
+    options = ["-- Select Faculty --"] + list(faculty_dict.keys()) + ["Search by Custom Email..."]
+
+    # The selectbox natively allows the user to type to search!
+    selected_option = st.selectbox("Search Name or Select:", options)
+
+    target_email = ""
+    if selected_option == "Search by Custom Email...":
+        target_email = st.text_input("Enter @aesl.in email:")
+    elif selected_option != "-- Select Faculty --":
+        target_email = faculty_dict[selected_option]
+
+    # use_container_width=True makes the button wide and easy to tap on phones
+    if st.button("📥 Fetch Schedule", use_container_width=True):
+        if target_email and target_email.endswith("@aesl.in"):
+            # Pass both email and the display name for the download files
+            fetch_and_display_schedule(target_email, selected_option)
+        else:
+            st.error("Please provide a valid @aesl.in email address.")
+
+st.write("---")
