@@ -4,3 +4,9 @@ google-auth-oauthlib
 pandas
 xlsxwriter
 fpdf
+streamlit>=1.42.0
+Authlib>=1.3.2
+google-api-python-client
+google-auth
+pandas
+python-dateutil
