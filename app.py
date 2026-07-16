@@ -291,11 +291,122 @@ def calculate_duration(start_time, end_time):
 
 def get_class_from_description(description):
     desc = description.upper() if description else ""
+    # for Abhishek Sir
     if "FR01" in desc: return "CFSA"
     elif "9W02" in desc: return "IC9X"
     elif "8WI1" in desc: return "IC8X"
     elif "FW02" in desc: return "FSIV"
     elif "TW04" in desc: return "CTYE"
+     # for Avinash Sir
+    elif "SW01" in desc: return "CSSB"
+    elif "SR01" in desc: return "CSSA"
+    elif "FW01" in desc: return "CFSB"
+    elif "OW03" in desc: return "CCFC"
+    # for Siddharth Sir
+    elif "RM10" in desc: return "CRF"
+    elif "OR01" in desc: return "CCFA"
+    elif "OW04" in desc: return "CCFD"
+    elif "TW02" in desc: return "CTYC"
+    elif "OW01" in desc: return "CCFJ"
+
+    # for Deepak Jain Sir
+    elif "RM02" in desc: return "CRA"
+    elif "RM09" in desc: return "CRE"
+    elif "OW10" in desc: return "COCFA"
+    elif "SW02" in desc: return "SSIV"
+    elif "TR05" in desc: return "OTYM"
+    
+    # for Rahul Sir
+    elif "RM04" in desc: return "CRB"
+    elif "RM06" in desc: return "CRD"
+    elif "TR01" in desc: return "CTYA"
+    elif "TW01" in desc: return "CCFG"
+    elif "OW06" in desc: return "CCFF"
+    elif "OW07" in desc: return "CTYB"
+
+    # for Diptarka Ghosh
+    elif "TR02" in desc: return "CTYG"
+    elif "TW05" in desc: return "CTYF"
+    elif "TW03" in desc: return "CTYD"
+
+    # for Susovan Mitra
+    elif "RM07" in desc: return "CWRMC"
+    elif "RM03" in desc: return "CWRMB"
+    elif "RM01" in desc: return "CWRMA"
+    elif "TW04" in desc: return "CWTYA"
+    elif "9W01" in desc: return "C9XB"
+    elif "XW01" in desc: return "C10XB"
+    elif "8W01" in desc: return "C8XA"
+    elif "XR01" in desc: return "C10XA"
+
+    # for Ratul Rudra
+    
+    elif "RM08" in desc: return "CWRMD"
+    elif "PS01" in desc: return "CPSA"
+    elif "OW05" in desc: return "CCFE"
+    elif "9W03" in desc: return "ICX9A"
+    elif "XW10" in desc: return "CW10X"
+    elif "CCM2" in desc: return "CCCN"
+
+    # for Amarjeet Kumar sir
+    elif "RM05" in desc: return "CRC"
+    elif "9R01" in desc: return "CX9A"
+    elif "OW08" in desc: return "CCFH"
+    elif "OW09" in desc: return "CCFI"
+    elif "OW02" in desc: return "CCFB"
+    elif "XWI01" in desc: return "CIC10XA"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"    
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+    # elif "SW01" in desc: return "CSSB"
+
+
+
+    
+
+    
+
+    
     return "Other"
 
 # ----------------- DOWNLOAD GENERATORS -----------------
