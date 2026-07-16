@@ -476,6 +476,21 @@ def fetch_and_display_schedule(email, name_label):
             end_time = parse_api_time(event['end'])
             description = event.get('description', '')
             summary = event.get('summary', 'No Title')
+processed_events = []
+        for event in raw_events:
+            if 'start' not in event or 'end' not in event:
+                continue
+
+            start_time = parse_api_time(event['start'])
+            end_time = parse_api_time(event['end'])
+            
+            # --- NEW FEATURE: Skip events shorter than 10 minutes (600 seconds) ---
+            if (end_time - start_time).total_seconds() < 600:
+                continue
+            # ----------------------------------------------------------------------
+
+            description = event.get('description', '')
+            summary = event.get('summary', 'No Title')
 
             processed_events.append({
                 'Class': get_class_from_description(description),
@@ -486,6 +501,15 @@ def fetch_and_display_schedule(email, name_label):
                 'Summary': summary,
                 'start_time': start_time 
             })
+            # processed_events.append({
+            #     'Class': get_class_from_description(description),
+            #     'Date': start_time.strftime("%d-%m-%Y"),
+            #     'Day': start_time.strftime("%A"),
+            #     'Time': start_time.strftime("%I:%M %p"),
+            #     'Duration': calculate_duration(start_time, end_time),
+            #     'Summary': summary,
+            #     'start_time': start_time 
+            # })
 
         processed_events.sort(key=lambda x: (x['Class'], x['start_time']), reverse=True)
         
