@@ -301,6 +301,8 @@ def get_class_from_description(description):
     elif "8WI1" in desc: return "IC8X"
     elif "FW02" in desc: return "FSIV"
     elif "TW04" in desc: return "CTYE"
+    elif "RM11" in desc: return "CRG"
+        
      # for Avinash Sir
     elif "SW01" in desc: return "CSSB"
     elif "SR01" in desc: return "CSSA"
