@@ -308,6 +308,8 @@ def get_class_from_description(description):
     elif "SR01" in desc: return "CSSA"
     elif "FW01" in desc: return "CFSB"
     elif "OW03" in desc: return "CCFC"
+    elif "RM12" in desc: return "CRH"
+        
     # for Siddharth Sir
     elif "RM10" in desc: return "CRF"
     elif "OR01" in desc: return "CCFA"
